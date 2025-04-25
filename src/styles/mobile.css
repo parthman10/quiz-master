@@ -1,0 +1,81 @@
+/* Base styles for all devices */
+:root {
+  --container-width-desktop: 800px;
+  --container-width-tablet: 95%;
+  --container-width-mobile: 100%;
+}
+
+/* Common styles */
+.quiz-container,
+.leaderboard-container,
+.my-quizzes-container {
+  width: var(--container-width-desktop);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Large screens (desktop) */
+@media screen and (min-width: 1200px) {
+  .quiz-container,
+  .leaderboard-container,
+  .my-quizzes-container {
+    width: var(--container-width-desktop);
+    max-width: 1200px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .quiz-container,
+  .leaderboard-container,
+  .my-quizzes-container {
+    width: var(--container-width-tablet);
+    padding: 1.5rem;
+  }
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 767px) {
+  .quiz-container,
+  .leaderboard-container,
+  .my-quizzes-container {
+    width: var(--container-width-mobile);
+    padding: 1rem;
+  }
+
+  .quiz-option-item {
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  .button,
+  .start-custom-quiz-button,
+  .back-button {
+    width: 100%;
+    min-height: 44px;
+    margin: 8px 0;
+  }
+}
+
+/* Ensure text readability across devices */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Touch-friendly elements for all devices */
+button,
+.quiz-option-item,
+input[type="radio"] + label {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effects for non-touch devices */
+@media (hover: hover) {
+  button:hover,
+  .quiz-option-item:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}

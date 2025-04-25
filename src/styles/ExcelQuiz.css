@@ -1,0 +1,142 @@
+.quiz-taking-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.quiz-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.quiz-question-container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quiz-question-item {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.quiz-question-item h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.quiz-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz-option-button {
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.quiz-option-button:hover {
+  background: #f0f0f0;
+}
+
+.quiz-option-correct {
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+  color: #155724 !important;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+  50% { transform: translate3d(-4px, 0, 0); }
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.quiz-option-incorrect {
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+  color: #721c24 !important;
+  transform-origin: center;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.quiz-feedback {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.quiz-feedback.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.quiz-feedback.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.draggable-item {
+  padding: 10px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: move;
+}
+
+.columns-container {
+  display: flex;
+  gap: 20px;
+}
+
+.drop-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.drop-zone {
+  min-height: 200px;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.quiz-timer {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: bold;
+}

@@ -1,0 +1,205 @@
+.my-quizzes-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.my-quizzes-title {
+  font-size: 2.5rem;
+  color: var(--dark-blue); /* Use a color from your theme */
+  margin-bottom: 2rem;
+}
+
+.quiz-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.quiz-list-item {
+  background-color: var(--light-gray); /* Use a color from your theme */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 0.5rem; /* Spacing between elements inside the item */
+}
+
+.quiz-title {
+  font-weight: bold;
+  color: var(--black); /* Use a color from your theme */
+  flex-grow: 1; /* Allow title to take available space */
+}
+
+.quiz-category {
+  font-size: 0.9em;
+  color: var(--dark-gray);
+  margin-left: 1rem; /* Add some space before category */
+}
+
+
+.start-custom-quiz-button {
+  background-color: var(--primary-blue); /* Use a color from your theme */
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  margin-left: 1rem; /* Add space before the button */
+}
+
+.start-custom-quiz-button:hover {
+  background-color: var(--dark-blue); /* Darker shade on hover */
+}
+
+
+.no-quizzes-message {
+  font-size: 1.1rem;
+  color: var(--dark-gray); /* Use a color from your theme */
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  /* Use styles consistent with other buttons, e.g., secondary-button */
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+.back-button:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Add media queries if needed for responsiveness */
+@media (max-width: 600px) {
+  .quiz-list-item {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .quiz-category, .start-custom-quiz-button {
+     margin-left: 0; /* Remove left margin */
+     margin-top: 0.5rem; /* Add top margin */
+  }
+
+  .start-custom-quiz-button {
+    width: 100%; /* Make button full width */
+    text-align: center;
+  }
+}
+
+.preview-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.preview-modal-content {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.preview-title {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.preview-subtitle {
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.preview-data-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.preview-data-item {
+  background-color: var(--light-gray);
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+}
+
+.preview-modal-close-button {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+}
+
+.preview-modal-close-button:hover {
+  background-color: var(--dark-blue);
+}
+
+.quiz-taking-view {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.quiz-questions-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.quiz-question-item {
+  background-color: var(--light-gray);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.quiz-options-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.quiz-option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.quiz-option-item input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.quiz-option-item label {
+  font-size: 1rem;
+  color: var(--dark-gray);
+}

@@ -1,0 +1,8 @@
+[build]
+  command = "CI=false npm run build"
+  publish = "build" # Or your actual publish directory (e.g., "dist")
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
